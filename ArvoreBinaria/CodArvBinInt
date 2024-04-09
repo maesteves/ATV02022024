@@ -1,0 +1,189 @@
+import java.util.Scanner;
+
+class Node {
+    public int item;
+    public Node left;
+    public Node right;
+    public Node parent;
+
+    public Node(int item) {
+        this.item = item;
+        this.left = null;
+        this.right = null;
+        this.parent = null;
+    }
+}
+
+class BinaryTree {
+    private Node root;
+
+    public BinaryTree() {
+        this.root = null;
+    }
+
+    public void insert(int value) {
+        root = insertRecursive(root, null, value);
+    }
+
+    private Node insertRecursive(Node current, Node parent, int value) {
+        if (current == null) {
+            Node newNode = new Node(value);
+            newNode.parent = parent;
+            return newNode;
+        }
+
+        if (value < current.item) {
+            current.left = insertRecursive(current.left, current, value);
+        } else if (value > current.item) {
+            current.right = insertRecursive(current.right, current, value);
+        }
+
+        return current;
+    }
+
+    public boolean remove(int value) {
+        Node nodeToRemove = findNode(root, value);
+        if (nodeToRemove == null) {
+            return false;
+        }
+
+        Node parent = nodeToRemove.parent;
+        if (nodeToRemove.left == null && nodeToRemove.right == null) {
+            if (parent == null) {
+                root = null;
+            } else if (nodeToRemove == parent.left) {
+                parent.left = null;
+            } else {
+                parent.right = null;
+            }
+        } else if (nodeToRemove.left != null && nodeToRemove.right != null) {
+            Node successor = findSuccessor(nodeToRemove);
+            nodeToRemove.item = successor.item;
+            remove(successor.item);
+        } else {
+            Node child = (nodeToRemove.left != null) ? nodeToRemove.left : nodeToRemove.right;
+            if (parent == null) {
+                root = child;
+            } else if (nodeToRemove == parent.left) {
+                parent.left = child;
+            } else {
+                parent.right = child;
+            }
+            child.parent = parent;
+        }
+
+        return true;
+    }
+
+    private Node findSuccessor(Node node) {
+        Node current = node.right;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current;
+    }
+
+    private Node findNode(Node current, int value) {
+        if (current == null || current.item == value) {
+            return current;
+        }
+
+        if (value < current.item) {
+            return findNode(current.left, value);
+        } else {
+            return findNode(current.right, value);
+        }
+    }
+
+    public void listElementsWithParentAndChildren() {
+        listElementsWithParentAndChildrenRecursive(root, null);
+    }
+
+    private void listElementsWithParentAndChildrenRecursive(Node current, Node parent) {
+        if (current != null) {
+            System.out.print("Node: " + current.item);
+            if (parent != null) {
+                System.out.print(", Parent: " + parent.item);
+            }
+            if (current.left != null || current.right != null) {
+                System.out.print(", Children: ");
+                if (current.left != null) {
+                    System.out.print(current.left.item + " ");
+                } else {
+                    System.out.print("- ");
+                }
+                if (current.right != null) {
+                    System.out.print(current.right.item + " ");
+                } else {
+                    System.out.print("- ");
+                }
+            }
+            System.out.println();
+            listElementsWithParentAndChildrenRecursive(current.left, current);
+            listElementsWithParentAndChildrenRecursive(current.right, current);
+        }
+    }
+
+    public boolean search(int value) {
+        return searchRecursive(root, value);
+    }
+
+    private boolean searchRecursive(Node current, int value) {
+        if (current == null) {
+            return false;
+        }
+        if (current.item == value) {
+            return true;
+        }
+        return value < current.item
+                ? searchRecursive(current.left, value)
+                : searchRecursive(current.right, value);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BinaryTree tree = new BinaryTree();
+        int[] values = {3, 87, 2, 0, 15, 7, 90, 11, 33, 51};
+        for (int value : values) {
+            tree.insert(value);
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        int option;
+        do {
+            System.out.println("1: Insert");
+            System.out.println("2: Remove");
+            System.out.println("3: Search");
+            System.out.println("4: List elements with parent and children");
+            System.out.println("5: Exit");
+            System.out.print("Option: ");
+            option = scanner.nextInt();
+
+            switch (option) {
+                case 1:
+                    System.out.print("Enter value to insert: ");
+                    int insertValue = scanner.nextInt();
+                    tree.insert(insertValue);
+                    break;
+                case 2:
+                    System.out.print("Enter value to remove: ");
+                    int removeValue = scanner.nextInt();
+                    boolean removed = tree.remove(removeValue);
+                    if (!removed) {
+                        System.out.println("Value not found");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Enter value to search: ");
+                    int searchValue = scanner.nextInt();
+                    boolean found = tree.search(searchValue);
+                    System.out.println(found ? "Value found" : "Value not found");
+                    break;
+                case 4:
+                    tree.listElementsWithParentAndChildren();
+                    break;
+            }
+        } while (option != 5);
+    }
+}
