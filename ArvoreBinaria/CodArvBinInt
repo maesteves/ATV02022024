@@ -144,10 +144,7 @@ class BinaryTree {
 public class Main {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
-        int[] values = {3, 87, 2, 0, 15, 7, 90, 11, 33, 51};
-        for (int value : values) {
-            tree.insert(value);
-        }
+        
 
         Scanner scanner = new Scanner(System.in);
         int option;
