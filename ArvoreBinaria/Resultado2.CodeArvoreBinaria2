@@ -1,0 +1,161 @@
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 1
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 2
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 3
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 10
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 20
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 30
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 11
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 12
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 13
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1
+Enter value to insert: 99
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 4
+Node: 1, Children: - 2 
+Node: 2, Parent: 1, Children: - 3 
+Node: 3, Parent: 2, Children: - 10 
+Node: 10, Parent: 3, Children: - 20 
+Node: 20, Parent: 10, Children: 11 30 
+Node: 11, Parent: 20, Children: - 12 
+Node: 12, Parent: 11, Children: - 13 
+Node: 13, Parent: 12
+Node: 30, Parent: 20, Children: - 99 
+Node: 99, Parent: 30
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 1 
+Enter value to insert: 23
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 4
+Node: 1, Children: - 2 
+Node: 2, Parent: 1, Children: - 3 
+Node: 3, Parent: 2, Children: - 10 
+Node: 10, Parent: 3, Children: - 20 
+Node: 20, Parent: 10, Children: 11 30 
+Node: 11, Parent: 20, Children: - 12 
+Node: 12, Parent: 11, Children: - 13 
+Node: 13, Parent: 12
+Node: 30, Parent: 20, Children: 23 99 
+Node: 23, Parent: 30
+Node: 99, Parent: 30
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 2
+Enter value to remove: 99
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 2
+Enter value to remove: 1
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 4
+Node: 2, Children: - 3 
+Node: 3, Parent: 2, Children: - 10 
+Node: 10, Parent: 3, Children: - 20 
+Node: 20, Parent: 10, Children: 11 30 
+Node: 11, Parent: 20, Children: - 12 
+Node: 12, Parent: 11, Children: - 13 
+Node: 13, Parent: 12
+Node: 30, Parent: 20, Children: 23 - 
+Node: 23, Parent: 30
+
+1: Insert
+2: Remove
+3: Search
+4: List elements with parent and children
+5: Exit
+Option: 5
