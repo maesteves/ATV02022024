@@ -1,0 +1,223 @@
+Programa Arvore binaria de int
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 1
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 2
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 3
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 10
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 20
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 30
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 11
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 12
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1 
+
+ Informe o valor (int) -> 13
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 99
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 4
+
+ Exibindo em ordem: 1 2 3 10 11 12 13 20 30 99 
+ Exibindo em pos-ordem: 13 12 11 99 30 20 10 3 2 1 
+ Exibindo em pre-ordem: 1 2 3 10 20 11 12 13 30 99 
+ Altura da arvore: 7
+ Quantidade de folhas: 2
+ Quantidade de Nós: 10
+ Valor minimo: 1
+ Valor maximo: 99
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 1
+
+ Informe o valor (int) -> 23
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 4
+
+ Exibindo em ordem: 1 2 3 10 11 12 13 20 23 30 99 
+ Exibindo em pos-ordem: 13 12 11 23 99 30 20 10 3 2 1 
+ Exibindo em pre-ordem: 1 2 3 10 20 11 12 13 30 23 99 
+ Altura da arvore: 7
+ Quantidade de folhas: 3
+ Quantidade de Nós: 11
+ Valor minimo: 1
+ Valor maximo: 99
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 2
+
+ Informe o valor (int) -> 99
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 2
+
+ Informe o valor (int) -> 1
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 4
+
+ Exibindo em ordem: 2 3 10 11 12 13 20 23 30 
+ Exibindo em pos-ordem: 13 12 11 23 30 20 10 3 2 
+ Exibindo em pre-ordem: 2 3 10 20 11 12 13 30 23 
+ Altura da arvore: 6
+ Quantidade de folhas: 2
+ Quantidade de Nós: 9
+ Valor minimo: 2
+ Valor maximo: 30
+
+***********************************
+Entre com a opcao:
+ ----1: Inserir
+ ----2: Excluir
+ ----3: Pesquisar
+ ----4: Exibir
+ ----5: Sair do programa
+***********************************
+-> 5
