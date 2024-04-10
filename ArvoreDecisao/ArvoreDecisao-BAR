@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bem-vindo ao Bar da Árvore de Decisão! Vamos te ajudar a escolher a melhor bebida.");
+
+        int tipoBebida = obterEscolha(scanner, "Escolha o tipo de bebida:\n 0 - Bebida Alcoólica\n 1 - Bebida não Alcoólica");
+
+        if (tipoBebida == 0) {
+            int preferenciaSabor = obterEscolha(scanner, "Você prefere bebidas amargas ou doces?\n 0 - Amargas\n 1 - Doces");
+
+            if (preferenciaSabor == 0) {
+                int tipoBebidaAmarga = obterEscolha(scanner, "Você prefere cerveja ou licor?\n 0 - Cerveja\n 1 - Licor");
+
+                if (tipoBebidaAmarga == 0) {
+                    System.out.println("Cerveja recomendada. Opte por estilos como IPA, Stout ou Porter para um sabor mais intenso.");
+                } else {
+                    System.out.println("Licor recomendado. Opte por sabores como Campari, Fernet ou Jägermeister para um sabor digestivo.");
+                }
+            } else {
+                int tipoBebidaDoce = obterEscolha(scanner, "Você prefere caipirinha ou mojito?\n 0 - Caipirinha\n 1 - Mojito");
+
+                if (tipoBebidaDoce == 0) {
+                    System.out.println("Caipirinha recomendada. Opte por sabores clássicos como limão, vodka e cachaça.");
+                } else {
+                    System.out.println("Mojito recomendado. Refrescante e saboroso, com rum, hortelã, limão e açúcar.");
+                }
+            }
+        } else {
+            int preferenciaTemperatura = obterEscolha(scanner, "Você prefere bebidas frias ou quentes?\n 0 - Frias\n 1 - Quentes");
+
+            if (preferenciaTemperatura == 0) {
+                int tipoBebidaFria = obterEscolha(scanner, "Você prefere suco ou refrigerante?\n 0 - Suco\n 1 - Refrigerante");
+
+                if (tipoBebidaFria == 0) {
+                    int tipoFruta = obterEscolha(scanner, "Você prefere suco de laranja ou suco de abacaxi?\n 0 - Laranja\n 1 - Abacaxi");
+
+                    if (tipoFruta == 0) {
+                        System.out.println("Suco de laranja recomendado, rico em vitamina C e refrescante.");
+                    } else {
+                        System.out.println("Suco de abacaxi recomendado, com sabor doce e tropical.");
+                    }
+                } else {
+                    System.out.println("Refrigerante recomendado. Escolha entre sabores tradicionais como cola, guaraná ou laranja.");
+                }
+            } else {
+                int tipoBebidaQuente = obterEscolha(scanner, "Você prefere café ou chá?\n 0 - Café\n 1 - Chá");
+
+                if (tipoBebidaQuente == 0) {
+                    System.out.println("Café recomendado. Opte por um espresso para um sabor intenso ou um cappuccino para uma bebida cremosa.");
+                } else {
+                    System.out.println("Chá recomendado. Escolha entre sabores como verde, preto, camomila ou hortelã para um efeito relaxante.");
+                }
+            }
+        }
+
+        scanner.close();
+    }
+
+    private static int obterEscolha(Scanner scanner, String mensagem) {
+        int escolha = -1;
+        while (escolha < 0 || escolha > 1) {
+            System.out.println(mensagem);
+            System.out.print("Digite sua escolha: ");
+            try {
+                escolha = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor, digite um número válido.");
+            }
+        }
+        return escolha;
+    }
+}
